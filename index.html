@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Ruwudu&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Evo's Ice Cream Parlor</title>
+</head>
+
+<style>
+    body.debug .container,
+    body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+    }
+
+    body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+</style>
+
+<body class="debug font">
+
+    <header class="container-fluid">
+        <section class="row">
+            <div class="col-12 bg-red fs-2 p-2 pb-0">Evo's Ice Cream Parlor</div>
+        </section>
+    </header>
+
+    <main class="container-fluid">
+        <section class="row">
+
+            <div class="col-12 col-md-6 p-3 text-danger">
+                <h1>CART</h1>
+                <div class="menu-border d-flex justify-content-between fs-3">
+                    <span>Name</span>
+                    <span>Qty</span>
+                    <span>Each</span>
+                    <span>Total</span>
+                </div>
+
+                <div class="cart menu-border px-2 d-flex flex-column justify-content-between">
+
+                    <div id="cart">
+                        <!-- <div class=" d-flex justify-content-between  fs-3">
+                            <span>Vanilla</span>
+                            <span>1</span>
+                            <span>$3</span>
+                            <span>$9</span>
+                        </div> -->
+
+                    </div>
+
+                    <div class="text-end">
+                        <span class="fs-3">TOTAL:$ 100 </span>
+                    </div>
+
+                    <div class="text-end p-1">
+                        <button class="btn bg-red text-light fs-3">PAY</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- //SECTION - Menu -->
+            <div class="col-md-6 col-12 p-3">
+                <h1 class="text-center text-danger">Toppings</h1>
+                <div class="row">
+                    <!-- //SECTION  TOPPINGS -->
+                    <div class="col-md-4 col-12 p-3 ">
+                        <div class="menu-border menu-item">
+                            <img class="menu-img"
+                                src="https://images.unsplash.com/photo-1516746924755-babd21844370?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                alt="sprinkles">
+                            <div class="d-flex justify-content-center p-2 fs-4">
+                                <button class="bg-red text-light menu-border menu-item"><span class="p-1">Sprinkles
+                                    </span>
+                                    <span class="p-1"> $0.25</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 p-3 ">
+                        <div class="menu-border menu-item">
+                            <img class="menu-img"
+                                src="https://images.unsplash.com/photo-1585502866757-30ae9e509e31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                                alt="chocolate chips">
+                            <div class="d-flex justify-content-center p-2 fs-4">
+                                <button class="bg-red text-light menu-border menu-item"><span class="p-1">Chocolate
+                                        Chips
+                                    </span>
+                                    <span class="p-1"> $0.25</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 p-3 ">
+                        <div class="menu-border menu-item">
+                            <img class="menu-img"
+                                src="https://images.unsplash.com/photo-1646318754907-dc7c0d236a97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+                                alt="Gummy Worms">
+                            <div class="d-flex justify-content-center p-2 fs-4">
+                                <button class="bg-red text-light menu-border menu-item"><span class="p-1">Gummy Worms
+                                    </span>
+                                    <span class="p-1"> $0.50</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="text-center text-danger">Vessels</h1>
+
+                    <!-- //SECTION  VESSELS -->
+                    <div class="col-md-4 col-12 p-3 ">
+                        <div class="menu-border menu-item">
+                            <img class="menu-img"
+                                src="https://images.unsplash.com/photo-1513329634746-37399553de66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                alt="Waffle Cone">
+                            <div class="d-flex justify-content-center p-2 fs-4">
+                                <button class="bg-red text-light menu-border menu-item"><span class="p-1">Waffle
+                                        Cone
+                                    </span>
+                                    <span class="p-1"> $1</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 p-3 ">
+                        <div class="menu-border menu-item">
+                            <img class="menu-img"
+                                src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Ice-Cream-Bowls_EXPS_FT21_26024_F_0507_1.jpg"
+                                alt="waffle bowl">
+                            <div class="d-flex justify-content-center p-2 fs-4">
+                                <button class="bg-red text-light menu-border menu-item"><span class="p-1">Waffle
+                                        Bowl
+                                    </span>
+                                    <span class="p-1"> $2</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 p-3 ">
+                        <div class="menu-border menu-item">
+                            <img class="menu-img"
+                                src="https://i3.wp.com/shewearsmanyhats.com/wp-content/uploads/2013/07/dipped-ice-cream-cones-4.jpg"
+                                alt="Dipped Cone">
+                            <div class="d-flex justify-content-center p-2 fs-4">
+                                <button class="bg-red text-light menu-border menu-item"><span class="p-1">Dipped
+                                        Cone
+                                    </span>
+                                    <span class="p-1"> $3</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h1 class="text-center text-danger">ICE CREAM</h1>
+
+                    <!-- //SECTION  ICE CREAM-->
+                    <div class="col-md-4 col-12 p-3 ">
+                        <div class="menu-border menu-item">
+                            <img class="menu-img"
+                                src="https://images.unsplash.com/photo-1646318754907-dc7c0d236a97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+                                alt="vanilla ice cream">
+                            <div class="d-flex justify-content-center p-2 fs-4">
+                                <button class="bg-red text-light menu-border menu-item" onclick="orderVanilla()"><span
+                                        class="p-1">Vanilla
+
+                                    </span>
+                                    <span class="p-1"> $3</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 p-3 ">
+                        <div class="menu-border menu-item">
+                            <img class="menu-img"
+                                src="https://images.unsplash.com/photo-1620197544620-c8cbd008a90a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=725&q=80"
+                                alt="chocolate ice cream">
+                            <div class="d-flex justify-content-center p-2 fs-4">
+                                <button class="bg-red text-light menu-border menu-item"
+                                    onclick="buyIceCream('Chocolate')"><span class="p-1">Chocolate
+                                    </span>
+                                    <span class="p-1"> $4</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 p-3 ">
+                        <div class="menu-border menu-item">
+                            <img class="menu-img"
+                                src="https://images.unsplash.com/photo-1560008581-09826d1de69e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=744&q=80"
+                                alt="Birthday Cake ice cream">
+                            <div class="d-flex justify-content-center p-2 fs-4">
+                                <button class="bg-red text-light menu-border menu-item"
+                                    onclick="buyIceCream('Birthday Cake')"><span class="p-1">Birthday
+                                        Cake
+                                    </span>
+                                    <span class="p-1"> $4</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 p-3 ">
+                        <div class="menu-border menu-item">
+                            <img class="menu-img"
+                                src="https://images.unsplash.com/photo-1597249536924-b226b1a1259d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80"
+                                alt="strawberry swirl">
+                            <div class="d-flex justify-content-center p-2 fs-4">
+                                <button class="bg-red text-light menu-border menu-item"
+                                    onclick="buyIceCream('Strawberry Swirl')"><span class="p-1">Strawberry
+                                        Swirl
+                                    </span>
+                                    <span class="p-1"> $3</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 p-3 ">
+                        <div class="menu-border menu-item">
+                            <img class="menu-img"
+                                src="https://plus.unsplash.com/premium_photo-1666920428771-68fc46bb6f0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                alt="creme brulee">
+                            <div class="d-flex justify-content-center p-2 fs-4">
+                                <button class="bg-red text-light menu-border menu-item"
+                                    onclick="buyIceCream('Creme Brulee')"><span class="p-1">Creme
+                                        Brulee
+                                    </span>
+                                    <span class="p-1"> $5</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12 p-3 ">
+                        <div class="menu-border menu-item">
+                            <img class="menu-img"
+                                src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=708&q=80"
+                                alt="butterscotch ice cream">
+                            <div class="d-flex justify-content-center p-2 fs-4">
+                                <button class="bg-red text-light menu-border menu-item"
+                                    onclick="buyIceCream('Butterscotch')"><span class="p-1">Butterscotch
+                                    </span>
+                                    <span class="p-1"> $4</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

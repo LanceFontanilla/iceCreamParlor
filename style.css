@@ -1,0 +1,29 @@
+/* UTILS */
+
+.bg-red {
+    background-color: rgba(187, 26, 26, 0.829);
+}
+
+.menu-border {
+    border: 3px solid rgba(187, 26, 26);
+
+}
+
+.menu-img {
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 15vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.font {
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Ruwudu', serif;
+}
+
+.cart {
+    min-height: 60vh;
+}
