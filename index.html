@@ -31,18 +31,18 @@
     }
 </style>
 
-<body class="debug font">
+<body class="font">
 
     <header class="container-fluid">
         <section class="row">
-            <div class="col-12 bg-red fs-2 p-2 pb-0">Evo's Ice Cream Parlor</div>
+            <div class="col-12 bg-red fs-2 p-2 pb-0 text-light">Evo's Ice Cream Parlor</div>
         </section>
     </header>
 
     <main class="container-fluid">
         <section class="row">
 
-            <div class="col-12 col-md-6 p-3 text-danger">
+            <div class="col-12 col-md-6 p-3 text-light">
                 <h1>CART</h1>
                 <div class="menu-border d-flex justify-content-between fs-3">
                     <span>Name</span>
@@ -64,7 +64,7 @@
                     </div>
 
                     <div class="text-end">
-                        <span class="fs-3">TOTAL:$ 100 </span>
+                        <span class="fs-3">TOTAL:$<span id="total">0</span> </span>
                     </div>
 
                     <div class="text-end p-1">
@@ -76,7 +76,7 @@
 
             <!-- //SECTION - Menu -->
             <div class="col-md-6 col-12 p-3">
-                <h1 class="text-center text-danger">Toppings</h1>
+                <h1 class="text-center text-light">Toppings</h1>
                 <div class="row">
                     <!-- //SECTION  TOPPINGS -->
                     <div class="col-md-4 col-12 p-3 ">
@@ -85,7 +85,8 @@
                                 src="https://images.unsplash.com/photo-1516746924755-babd21844370?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                                 alt="sprinkles">
                             <div class="d-flex justify-content-center p-2 fs-4">
-                                <button class="bg-red text-light menu-border menu-item"><span class="p-1">Sprinkles
+                                <button class="bg-red text-light menu-border menu-item"
+                                    onclick="buyTopping('Sprinkles')"><span class="p-1">Sprinkles
                                     </span>
                                     <span class="p-1"> $0.25</span></button>
                             </div>
@@ -97,7 +98,8 @@
                                 src="https://images.unsplash.com/photo-1585502866757-30ae9e509e31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
                                 alt="chocolate chips">
                             <div class="d-flex justify-content-center p-2 fs-4">
-                                <button class="bg-red text-light menu-border menu-item"><span class="p-1">Chocolate
+                                <button class="bg-red text-light menu-border menu-item"
+                                    onclick="buyTopping('Chocolate Chips')"><span class="p-1">Chocolate
                                         Chips
                                     </span>
                                     <span class="p-1"> $0.25</span></button>
@@ -110,7 +112,8 @@
                                 src="https://images.unsplash.com/photo-1646318754907-dc7c0d236a97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
                                 alt="Gummy Worms">
                             <div class="d-flex justify-content-center p-2 fs-4">
-                                <button class="bg-red text-light menu-border menu-item"><span class="p-1">Gummy Worms
+                                <button class="bg-red text-light menu-border menu-item"
+                                    onclick="buyTopping('Gummy Worms')"><span class="p-1">Gummy Worms
                                     </span>
                                     <span class="p-1"> $0.50</span></button>
                             </div>
@@ -125,7 +128,8 @@
                                 src="https://images.unsplash.com/photo-1513329634746-37399553de66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                                 alt="Waffle Cone">
                             <div class="d-flex justify-content-center p-2 fs-4">
-                                <button class="bg-red text-light menu-border menu-item"><span class="p-1">Waffle
+                                <button class="bg-red text-light menu-border menu-item"
+                                    onclick="buyVessel('Waffle Cone')"><span class="p-1">Waffle
                                         Cone
                                     </span>
                                     <span class="p-1"> $1</span></button>
@@ -138,7 +142,8 @@
                                 src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Ice-Cream-Bowls_EXPS_FT21_26024_F_0507_1.jpg"
                                 alt="waffle bowl">
                             <div class="d-flex justify-content-center p-2 fs-4">
-                                <button class="bg-red text-light menu-border menu-item"><span class="p-1">Waffle
+                                <button class="bg-red text-light menu-border menu-item"
+                                    onclick="buyVessel('Waffle Bowl')"><span class="p-1">Waffle
                                         Bowl
                                     </span>
                                     <span class="p-1"> $2</span></button>
@@ -151,7 +156,8 @@
                                 src="https://i3.wp.com/shewearsmanyhats.com/wp-content/uploads/2013/07/dipped-ice-cream-cones-4.jpg"
                                 alt="Dipped Cone">
                             <div class="d-flex justify-content-center p-2 fs-4">
-                                <button class="bg-red text-light menu-border menu-item"><span class="p-1">Dipped
+                                <button class="bg-red text-light menu-border menu-item"
+                                    onclick="buyVessel('Dipped Cone')"><span class="p-1">Dipped
                                         Cone
                                     </span>
                                     <span class="p-1"> $3</span></button>

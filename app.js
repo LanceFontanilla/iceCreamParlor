@@ -82,6 +82,20 @@ function buyIceCream(iceCreamName) {
     drawCart()
 }
 
+function buyTopping(toppingName) {
+    let foundTopping = toppings.find(topping => topping.name == toppingName)
+    foundTopping.quantity++
+    console.log('buying topping', foundTopping)
+    drawCart()
+}
+
+function buyVessel(vesselName) {
+    let foundVessel = vessels.find(vessel => vessel.name == vesselName)
+    foundVessel.quantity++
+    console.log('buying vessel', foundVessel)
+    drawCart()
+}
+
 
 
 function drawCart() {
@@ -91,25 +105,62 @@ function drawCart() {
             template += `  <div class=" d-flex justify-content-between  fs-3">
                             <span>${iceCream.name}</span>
                             <span>${iceCream.quantity}</span>
-                            <span>${iceCream.price}</span>
-                            <span>${subTotal}</span>
+                            <span>$${iceCream.price}</span>
+                            <span></span>
                            </div>
                          `
-
         }
-        console.log(template)
     })
+    vessels.forEach(vessel => {
+        if (vessel.quantity > 0) {
+            template += `  <div class=" d-flex justify-content-between  fs-3">
+                            <span>${vessel.name}</span>
+                            <span>${vessel.quantity}</span>
+                            <span>$${vessel.price}</span>
+                            <span></span>
+                           </div>
+                         `
+        }
+    })
+    toppings.forEach(topping => {
+        if (topping.quantity > 0) {
+            template += `  <div class=" d-flex justify-content-between  fs-3">
+                            <span>${topping.name}</span>
+                            <span>${topping.quantity}</span>
+                            <span>$${topping.price}</span>
+                            <span></span>
+                           </div>
+                         `
+        }
+    })
+    console.log(template)
     cartElem.innerHTML = template
     drawTotals()
 }
 
-let subTotal = 0
+
+
 function drawTotals() {
+    let cost = 0
     iceCreams.forEach(iceCream => {
         if (iceCream.quantity > 0) {
-            subTotal += iceCream.quantity * iceCream.price
+            cost += iceCream.quantity * iceCream.price
         }
-        console.log('subtotal', subTotal)
     })
+    toppings.forEach(topping => {
+        if (topping.quantity > 0) {
+            cost += topping.quantity * topping.price
+        }
+    })
+    vessels.forEach(vessels => {
+        if (vessels.quantity > 0) {
+            cost += vessels.quantity * vessels.price
+        }
+    })
+
+
+    console.log('total', cost)
+
+    totalElem.innerText = cost.toFixed(2)
 
 }
