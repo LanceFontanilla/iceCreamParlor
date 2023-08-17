@@ -42,13 +42,13 @@
     <main class="container-fluid">
         <section class="row">
 
-            <div class="col-12 col-md-6 p-3 text-light">
+            <div class="col-12 col-md-6 p-4 text-light">
                 <h1>CART</h1>
                 <div class="menu-border d-flex justify-content-between fs-3">
                     <span>Name</span>
                     <span>Qty</span>
                     <span>Each</span>
-                    <span>Total</span>
+                    <span></span>
                 </div>
 
                 <div class="cart menu-border px-2 d-flex flex-column justify-content-between">
@@ -67,8 +67,8 @@
                         <span class="fs-3">TOTAL:$<span id="total">0</span> </span>
                     </div>
 
-                    <div class="text-end p-1">
-                        <button class="btn bg-red text-light fs-3">PAY</button>
+                    <div class="text-end p-2">
+                        <button class="btn bg-red text-light fs-3" onclick="pay()">PAY</button>
                     </div>
                 </div>
             </div>
@@ -79,20 +79,20 @@
                 <h1 class="text-center text-light">Toppings</h1>
                 <div class="row">
                     <!-- //SECTION  TOPPINGS -->
-                    <div class="col-md-4 col-12 p-3 ">
+                    <div class="col-md-4 col-12 p-2 ">
                         <div class="menu-border menu-item">
                             <img class="menu-img"
                                 src="https://images.unsplash.com/photo-1516746924755-babd21844370?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                                 alt="sprinkles">
                             <div class="d-flex justify-content-center p-2 fs-4">
                                 <button class="bg-red text-light menu-border menu-item"
-                                    onclick="buyTopping('Sprinkles')"><span class="p-1">Sprinkles
-                                    </span>
+                                    onclick="buyTopping('Sprinkles')"><span class="p-1">Fairy Dust
+                                    </span><br>
                                     <span class="p-1"> $0.25</span></button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-12 p-3 ">
+                    <div class="col-md-4 col-12 p-2 ">
                         <div class="menu-border menu-item">
                             <img class="menu-img"
                                 src="https://images.unsplash.com/photo-1585502866757-30ae9e509e31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
@@ -106,10 +106,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-12 p-3 ">
+                    <div class="col-md-4 col-12 p-2 ">
                         <div class="menu-border menu-item">
                             <img class="menu-img"
-                                src="https://images.unsplash.com/photo-1646318754907-dc7c0d236a97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+                                src="https://images.unsplash.com/photo-1499195333224-3ce974eecb47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Z3VtbXklMjB3b3Jtc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
                                 alt="Gummy Worms">
                             <div class="d-flex justify-content-center p-2 fs-4">
                                 <button class="bg-red text-light menu-border menu-item"
@@ -119,10 +119,10 @@
                             </div>
                         </div>
                     </div>
-                    <h1 class="text-center text-danger">Vessels</h1>
+                    <h1 class="text-center text-light">Vessels</h1>
 
                     <!-- //SECTION  VESSELS -->
-                    <div class="col-md-4 col-12 p-3 ">
+                    <div class="col-md-4 col-12 p-2 ">
                         <div class="menu-border menu-item">
                             <img class="menu-img"
                                 src="https://images.unsplash.com/photo-1513329634746-37399553de66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
@@ -136,7 +136,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-12 p-3 ">
+                    <div class="col-md-4 col-12 p-2 ">
                         <div class="menu-border menu-item">
                             <img class="menu-img"
                                 src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Ice-Cream-Bowls_EXPS_FT21_26024_F_0507_1.jpg"
@@ -150,7 +150,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-12 p-3 ">
+                    <div class="col-md-4 col-12 p-2 ">
                         <div class="menu-border menu-item">
                             <img class="menu-img"
                                 src="https://i3.wp.com/shewearsmanyhats.com/wp-content/uploads/2013/07/dipped-ice-cream-cones-4.jpg"
@@ -165,10 +165,10 @@
                         </div>
                     </div>
 
-                    <h1 class="text-center text-danger">ICE CREAM</h1>
+                    <h1 class="text-center text-light">Ice Cream</h1>
 
                     <!-- //SECTION  ICE CREAM-->
-                    <div class="col-md-4 col-12 p-3 ">
+                    <div class="col-md-4 col-12 p-2 ">
                         <div class="menu-border menu-item">
                             <img class="menu-img"
                                 src="https://images.unsplash.com/photo-1646318754907-dc7c0d236a97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
@@ -182,7 +182,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-12 p-3 ">
+                    <div class="col-md-4 col-12 p-2 ">
                         <div class="menu-border menu-item">
                             <img class="menu-img"
                                 src="https://images.unsplash.com/photo-1620197544620-c8cbd008a90a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=725&q=80"
@@ -195,35 +195,33 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-12 p-3 ">
+                    <div class="col-md-4 col-12 p-2 ">
                         <div class="menu-border menu-item">
                             <img class="menu-img"
                                 src="https://images.unsplash.com/photo-1560008581-09826d1de69e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=744&q=80"
                                 alt="Birthday Cake ice cream">
                             <div class="d-flex justify-content-center p-2 fs-4">
                                 <button class="bg-red text-light menu-border menu-item"
-                                    onclick="buyIceCream('Birthday Cake')"><span class="p-1">Birthday
-                                        Cake
+                                    onclick="buyIceCream('Fairy Fun')"><span class="p-1">Fairy Fun
                                     </span>
                                     <span class="p-1"> $4</span></button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-12 p-3 ">
+                    <div class="col-md-4 col-12 p-2 ">
                         <div class="menu-border menu-item">
                             <img class="menu-img"
                                 src="https://images.unsplash.com/photo-1597249536924-b226b1a1259d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80"
                                 alt="strawberry swirl">
                             <div class="d-flex justify-content-center p-2 fs-4">
                                 <button class="bg-red text-light menu-border menu-item"
-                                    onclick="buyIceCream('Strawberry Swirl')"><span class="p-1">Strawberry
-                                        Swirl
+                                    onclick="buyIceCream('Berry Swirl')"><span class="p-1">Berry Swirl
                                     </span>
                                     <span class="p-1"> $3</span></button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-12 p-3 ">
+                    <div class="col-md-4 col-12 p-2 ">
                         <div class="menu-border menu-item">
                             <img class="menu-img"
                                 src="https://plus.unsplash.com/premium_photo-1666920428771-68fc46bb6f0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
@@ -237,14 +235,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-12 p-3 ">
+                    <div class="col-md-4 col-12 p-2 ">
                         <div class="menu-border menu-item">
                             <img class="menu-img"
                                 src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=708&q=80"
                                 alt="butterscotch ice cream">
                             <div class="d-flex justify-content-center p-2 fs-4">
                                 <button class="bg-red text-light menu-border menu-item"
-                                    onclick="buyIceCream('Butterscotch')"><span class="p-1">Butterscotch
+                                    onclick="buyIceCream('Butterscotch')"><span class="p-1">Butter Scotch
                                     </span>
                                     <span class="p-1"> $4</span></button>
                             </div>

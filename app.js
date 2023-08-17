@@ -9,12 +9,12 @@ const iceCreams = [{
     quantity: 0
 },
 {
-    name: 'Birthday Cake',
+    name: 'Fairy Fun',
     price: 4,
     quantity: 0
 },
 {
-    name: 'Strawberry Swirl',
+    name: 'Berry Swirl',
     price: 3,
     quantity: 0
 },
@@ -105,7 +105,7 @@ function drawCart() {
             template += `  <div class=" d-flex justify-content-between  fs-3">
                             <span>${iceCream.name}</span>
                             <span>${iceCream.quantity}</span>
-                            <span>$${iceCream.price}</span>
+                            <span>$${iceCream.price.toFixed(2)}</span>
                             <span></span>
                            </div>
                          `
@@ -116,7 +116,7 @@ function drawCart() {
             template += `  <div class=" d-flex justify-content-between  fs-3">
                             <span>${vessel.name}</span>
                             <span>${vessel.quantity}</span>
-                            <span>$${vessel.price}</span>
+                            <span>$${vessel.price.toFixed(2)}</span>
                             <span></span>
                            </div>
                          `
@@ -127,7 +127,7 @@ function drawCart() {
             template += `  <div class=" d-flex justify-content-between  fs-3">
                             <span>${topping.name}</span>
                             <span>${topping.quantity}</span>
-                            <span>$${topping.price}</span>
+                            <span>$${topping.price.toFixed(2)}</span>
                             <span></span>
                            </div>
                          `
@@ -163,4 +163,16 @@ function drawTotals() {
 
     totalElem.innerText = cost.toFixed(2)
 
+}
+
+function pay() {
+    if (window.confirm('Are you ready to pay?')) {
+        toppings.forEach(topping => topping.quantity = 0)
+        iceCreams.forEach(iceCream => iceCream.quantity = 0)
+        vessels.forEach(vessel => vessel.quantity = 0)
+
+        console.log('pay', toppings, vessels, iceCreams)
+
+        drawCart()
+    }
 }
